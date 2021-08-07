@@ -1,12 +1,19 @@
 const opn = document.querySelector("#opn");
+
 const slct = document.querySelector("#slct");
     const slctYn = document.querySelector("#slctYn");
     const slctInp = document.querySelector("#slctInp");
     const slctOut = document.querySelector("#slctOut");
+
 const yn = document.querySelector("#yn");
+
 const inp = document.querySelector("#inp");
     const inpAdd = document.querySelector("#inpAdd");
+    const userInput = document.querySelector("#userInput");
+    const inpReady = document.querySelector("#inpReady");
     let inpArr = [];
+
+// INTERFACE 
 
     opn.addEventListener("click", (event) => { // OPENING SCREEN
         opn.classList.add("invisible");
@@ -25,13 +32,17 @@ const inp = document.querySelector("#inp");
         })
 
             inpAdd.addEventListener("click", (event) => { // PUSH INPUT
-                alert("yes");
+                addInp();
             })
 
-    slctOut.addEventListener("click", (event) => { // CLICK OUTPUT
-        alert("yesyesyesyes");
-        slct.classList.add("invisible");
-    })
+            inpReady.addEventListener("click", (event) => { // RANDOMIZE INPUT
+                runInp();
+            })
+
+        slctOut.addEventListener("click", (event) => { // CLICK OUTPUT
+            alert("yesyesyesyes");
+            slct.classList.add("invisible");
+        })
 
 
 // FUNCTIONS
@@ -43,4 +54,14 @@ function runYn() { // YES OR NO
     yn.addEventListener("click", (event) => {
         runYn();
     })
+}
+
+function addInp() {  // PUSH TO INPUT ARRAY
+    inpArr.push(document.getElementById("userInput").value); 
+    document.getElementById("userInput").value="";
+} 
+
+function runInp() { // INPUT ARRAY RANDOMIZER
+    let inpOut = inpArr[Math.floor(Math.random() * inpArr.length)];
+    document.getElementById("inp").innerHTML = `${inpOut}`;
 }
