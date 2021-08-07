@@ -8,10 +8,10 @@
 }
 
 .text-a {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Saira', sans-serif;
     text-transform: uppercase;
     color: #3E2952;
-    font-size: 159%;
+    font-size: 249%;
 }
  
 .centered {
@@ -19,6 +19,18 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+
+.left{
+    position: relative;
+    left: 0%;
+    top: 50%;
+}
+
+.right{
+    position: relative;
+    left: 90%;
+    top: 50%;
 }
 
 .inline{
@@ -31,3 +43,13 @@
     pointer-events: none;
 }
 
+#userInput {
+    background: none;
+    width:100%;
+    border: 7px solid #3E2952;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    color: #3E2952;
+    font-size: 169%;
+    transform: skew(15deg);
+}

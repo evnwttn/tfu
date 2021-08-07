@@ -86,14 +86,14 @@ function inpEnter() { // ALLOWS ENTER IN INPUT
 }
 
 function runOutp() { // RUN OUTPUT
-    let outPi = ["Bar None.", 
-                "The Rose.",
-                "Peter Easton.",
-                "Needs, Military Road",
-                "Ultrafar.",
-                "Bowling.",
-                "Eatin' Ass.",
-                "Assin' Eat."];
+    let outPi = ["X1", 
+                "X2",
+                "X3",
+                "X4",
+                "X5",
+                "X6",
+                "X7",
+                "X8"];
     let outPj = outPi[Math.floor(Math.random() * outPi.length)];
     document.getElementById("outp").innerHTML = `${outPj}`;
 }
