@@ -13,6 +13,8 @@ const inp = document.querySelector("#inp");
     const inpReady = document.querySelector("#inpReady");
     let inpArr = [];
 
+const outp = document.querySelector("#outp");
+
 // INTERFACE 
 
     opn.addEventListener("click", (event) => { // OPENING SCREEN
@@ -29,20 +31,27 @@ const inp = document.querySelector("#inp");
         slctInp.addEventListener("click", (event) => { // CLICK INPUT
             slct.classList.add("invisible");
             inp.classList.remove("invisible");
+            inpEnter();
         })
 
             inpAdd.addEventListener("click", (event) => { // PUSH INPUT
                 addInp();
             })
-
+                
             inpReady.addEventListener("click", (event) => { // RANDOMIZE INPUT
                 runInp();
             })
 
         slctOut.addEventListener("click", (event) => { // CLICK OUTPUT
-            alert("yesyesyesyes");
             slct.classList.add("invisible");
+            outp.classList.remove("invisible");
         })
+
+            outp.addEventListener("click", (event) => {
+                runOutp();
+            })
+
+
 
 
 // FUNCTIONS
@@ -51,9 +60,9 @@ function runYn() { // YES OR NO
     let yni = ["yes.", "no."];
     let ynj = yni[Math.floor(Math.random() * yni.length)];
     document.getElementById("yn").innerHTML = `${ynj}`;
-    yn.addEventListener("click", (event) => {
-        runYn();
-    })
+    // yn.addEventListener("click", (event) => {
+    //     runYn();
+    // })
 }
 
 function addInp() {  // PUSH TO INPUT ARRAY
@@ -64,4 +73,27 @@ function addInp() {  // PUSH TO INPUT ARRAY
 function runInp() { // INPUT ARRAY RANDOMIZER
     let inpOut = inpArr[Math.floor(Math.random() * inpArr.length)];
     document.getElementById("inp").innerHTML = `${inpOut}`;
+}
+
+function inpEnter() { // ALLOWS ENTER IN INPUT
+    document.getElementById("userInput").addEventListener("keyup", // ALLOWS ENTER
+                function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                    document.getElementById("inpAdd").click();
+                    }
+                });
+}
+
+function runOutp() { // RUN OUTPUT
+    let outPi = ["Bar None.", 
+                "The Rose.",
+                "Peter Easton.",
+                "Needs, Military Road",
+                "Ultrafar.",
+                "Bowling.",
+                "Eatin' Ass.",
+                "Assin' Eat."];
+    let outPj = outPi[Math.floor(Math.random() * outPi.length)];
+    document.getElementById("outp").innerHTML = `${outPj}`;
 }
