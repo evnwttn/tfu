@@ -2,7 +2,7 @@
     font-family: 'PT Sans', sans-serif;
     text-transform: uppercase;
 }
-
+ 
 .centered {
     position: absolute;
     left: 50%;
@@ -17,5 +17,6 @@
 .invisible {
     opacity: 0%;
     z-index: -10;
+    pointer-events: none;
 }
 
