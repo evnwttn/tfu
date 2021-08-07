@@ -1,10 +1,21 @@
+.background {
+    background-image: linear-gradient(#DF8B60
+    , #BC859C);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .text-a {
     font-family: 'PT Sans', sans-serif;
     text-transform: uppercase;
+    color: #3E2952;
 }
  
 .centered {
     position: absolute;
+    font-size: 129%;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
