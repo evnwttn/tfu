@@ -86,14 +86,19 @@ function inpEnter() { // ALLOWS ENTER IN INPUT
 }
 
 function runOutp() { // RUN OUTPUT
-    let outPi = ["X1", 
-                "X2",
-                "X3",
-                "X4",
-                "X5",
-                "X6",
-                "X7",
-                "X8"];
+    let outPi = ["BREWDOCK", 
+                "TOSLOW",
+                "MOHAMED ALI",
+                "SUN SUSHI",
+                "3 SISTERS",
+                "#4",
+                "YELLOWBELLY / UNDERBELLY",
+                "MERCHANT TAVERN",
+                "ADELAIDE OYSTER HOUSE",
+                "THE GROUNDS CAFE",
+                "FISH EXCHANGE",
+                "CHINCHED",
+            ];
     let outPj = outPi[Math.floor(Math.random() * outPi.length)];
     document.getElementById("outp").innerHTML = `${outPj}`;
 }
