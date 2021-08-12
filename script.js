@@ -1,54 +1,54 @@
-const opn = document.querySelector("#opn");
+const open = document.querySelector("#open");
 
-const slct = document.querySelector("#slct");
-    const slctYn = document.querySelector("#slctYn");
-    const slctInp = document.querySelector("#slctInp");
-    const slctOut = document.querySelector("#slctOut");
+const selectScreen = document.querySelector("#selectScreen");
+    const selectYn = document.querySelector("#selectYn");
+    const selectInput = document.querySelector("#selectInput");
+    const selectOutput = document.querySelector("#selectOutput");
 
 const yn = document.querySelector("#yn");
 
-const inp = document.querySelector("#inp");
-    const inpAdd = document.querySelector("#inpAdd");
+const inputScreen = document.querySelector("#inputScreen");
+    const inputAdd = document.querySelector("#inputAdd");
     const userInput = document.querySelector("#userInput");
-    const inpReady = document.querySelector("#inpReady");
-    let inpArr = [];
+    const inputReady = document.querySelector("#inputReady");
+    let inputArr = [];
 
-const outp = document.querySelector("#outp");
+const outputScreen = document.querySelector("#outputScreen");
 
 // INTERFACE 
 
-    opn.addEventListener("click", (event) => { // OPENING SCREEN
-        opn.classList.add("invisible");
-        slct.classList.remove("invisible");
+    open.addEventListener("click", (event) => { // OPENING SCREEN
+        open.classList.add("invisible");
+        selectScreen.classList.remove("invisible");
     })
 
-        slctYn.addEventListener("click", (event) => { // CLICK Y/N
-            slct.classList.add("invisible");
+        selectYn.addEventListener("click", (event) => { // CLICK Y/N
+            selectScreen.classList.add("invisible");
             yn.classList.remove("invisible");
             runYn();
         })
     
-        slctInp.addEventListener("click", (event) => { // CLICK INPUT
-            slct.classList.add("invisible");
-            inp.classList.remove("invisible");
-            inpEnter();
+        selectInput.addEventListener("click", (event) => { // CLICK INPUT
+            selectScreen.classList.add("invisible");
+            inputScreen.classList.remove("invisible");
+            inputEnter();
         })
 
-            inpAdd.addEventListener("click", (event) => { // PUSH INPUT
-                addInp();
+            inputAdd.addEventListener("click", (event) => { // PUSH INPUT
+                addInput();
             })
                 
-            inpReady.addEventListener("click", (event) => { // RANDOMIZE INPUT
-                runInp();
+            inputReady.addEventListener("click", (event) => { // RANDOMIZE INPUT
+                runInput();
             })
 
-        slctOut.addEventListener("click", (event) => { // CLICK OUTPUT
-            slct.classList.add("invisible");
-            outp.classList.remove("invisible");
+        selectOutput.addEventListener("click", (event) => { // CLICK OUTPUT
+            selectScreen.classList.add("invisible");
+            outputScreen.classList.remove("invisible");
         })
 
-            outp.addEventListener("click", (event) => {
-                runOutp();
+            outputScreen.addEventListener("click", (event) => {
+                runOutput();
             })
 
 
@@ -60,33 +60,30 @@ function runYn() { // YES OR NO
     let yni = ["yes.", "no."];
     let ynj = yni[Math.floor(Math.random() * yni.length)];
     document.getElementById("yn").innerHTML = `${ynj}`;
-    // yn.addEventListener("click", (event) => {
-    //     runYn();
-    // })
 }
 
-function addInp() {  // PUSH TO INPUT ARRAY
-    inpArr.push(document.getElementById("userInput").value); 
+function addInput() {  // PUSH TO INPUT ARRAY
+    inputArr.push(document.getElementById("userInput").value); 
     document.getElementById("userInput").value="";
 } 
 
-function runInp() { // INPUT ARRAY RANDOMIZER
-    let inpOut = inpArr[Math.floor(Math.random() * inpArr.length)];
-    document.getElementById("inp").innerHTML = `${inpOut}`;
+function runInput() { // INPUT ARRAY RANDOMIZER
+    let inpOut = inputArr[Math.floor(Math.random() * inputArr.length)];
+    document.getElementById("inputScreen").innerHTML = `${inpOut}`;
 }
 
-function inpEnter() { // ALLOWS ENTER IN INPUT
+function inputEnter() { // ALLOWS ENTER IN INPUT
     document.getElementById("userInput").addEventListener("keyup", // ALLOWS ENTER
                 function(event) {
                     event.preventDefault();
                     if (event.keyCode === 13) {
-                    document.getElementById("inpAdd").click();
+                    document.getElementById("inputAdd").click();
                     }
                 });
 }
 
-function runOutp() { // RUN OUTPUT
-    let outPi = ["BREWDOCK", 
+function runOutput() { // RUN OUTPUT
+    let outputi = ["BREWDOCK", 
                 "TOSLOW",
                 "MOHAMED ALI",
                 "SUN SUSHI",
@@ -99,6 +96,6 @@ function runOutp() { // RUN OUTPUT
                 "FISH EXCHANGE",
                 "CHINCHED",
             ];
-    let outPj = outPi[Math.floor(Math.random() * outPi.length)];
-    document.getElementById("outp").innerHTML = `${outPj}`;
+    let outputj = outputi[Math.floor(Math.random() * outputi.length)];
+    document.getElementById("outputScreen").innerHTML = `${outputj}`;
 }
