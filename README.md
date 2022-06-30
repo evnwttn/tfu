@@ -10,7 +10,7 @@ a panacea for the indecisive
 
 ---
 
-tfu- is a randomizer i built to remedy date night option paralysis.
+tfu- is a randomizer i built to remedy date night option paralysis
 
 (and to familiarize myself with vanilla javascript & styling) 
 
@@ -20,6 +20,6 @@ tfu- is a randomizer i built to remedy date night option paralysis.
 <li>[otpt] - returns a random restaurant from st. john's metro area</li>
 </ul>
 
-i'd like to expand on [otpt] in the future to pull from google maps based on user location.
+i'd like to expand on [otpt] in the future to pull from google maps based on user location
 
 
