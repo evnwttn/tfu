@@ -1,7 +1,5 @@
 # tfu-
 
-https://evnwttn.github.io/tfu-/
-
 a panacea for the indecisive
 
 ---
